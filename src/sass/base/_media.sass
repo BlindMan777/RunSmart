@@ -89,9 +89,33 @@
         &__content
             margin-top: 35px
     .reviews
+        padding-bottom: 35px
         .review
             &__descr
                 width: 340px
+    .footer
+        &__info
+            padding: 25px
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            width: 100%
+            height: 20%
+            top: 100%
+            transform: translate(-50%, -100%)
+        &__addres
+            font-size: 17px
+            line-height: 17px
+            margin-right: 15px
+        &__phone
+            margin-top: 0
+            font-size: 17px
+            line-height: 17px
+        &__social-links
+            margin: 15px 75px 0 75px
+        &__circle
+            height: 45px
+            width: 45px
 @media (max-width: 575px)
     .title
         &_left
@@ -193,3 +217,11 @@
             &__descr
                 width: 260px
                 font-size: 14px
+    .footer
+        &__info
+            height: 170px 
+        &__addres
+            margin-right: 0
+        &__phone 
+            margin: 15px 70px 0 70px
+        
