@@ -43,4 +43,35 @@ $(document).ready(function(){
     $('.site_btn_mini').on('click', function() {
       $('.overlay, #order').fadeIn();
     });
+
+    function validationForm(form) {
+      $(form).validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 2
+          },
+          phone: "required",
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        messages: {
+          name: {
+            required: "Введіть, будь ласка, своє ім'я",
+            minlength: jQuery.validator.format("Потрібно ввести як мінімум {0} символа!")
+          },
+          phone: "Введіть, будь ласка, номер телефону",
+          email: {
+            required: "Введіть, будь ласка, свою пошту",
+            email: "Пошта повинна бути формату name@domain.com!"
+          }
+        }
+      });
+    };
+
+    validationForm('#consultation-form');
+    validationForm('#consultation form');
+    validationForm('#order form');
 });
